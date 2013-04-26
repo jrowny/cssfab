@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="yacg" >
+  <head>
+    <meta charset="utf-8">
+    <title>YetAnotherCSS3Gen - Beta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Just another CSS3 Generator">
+    <meta name="author" content="Jonathan Rowny">   
+    <link href="lib/normalize.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link href="lib/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="lib/github.css" rel="stylesheet" type="text/css">
+    <link href="lib/miniColor/jquery.miniColors.css" rel="stylesheet" type="text/css">
+    <link href="lib/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" type="text/css">
+    <link href="lib/topcoat/css/topcoat.css" rel="stylesheet" type="text/css">    
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+    <script src="lib/head.load.min.js"></script>
+  </head>
+  <body data-ng-controller="AppCtrl" ng-init="minimized=false;mode='normal'">
+    <div class="settings bg-slategray">
+      <span class="button-group large">
+          <a ng-click="mode='normal'"class="button start dark large" href="#button-bar" role="button">Normal</a>
+          <a ng-click="mode='hover'" class="button inside dark large" href="#button-bar" role="button">Hover</a>
+          <a ng-click="mode='before'"class="button inside dark large" href="#button-bar" role="button">Before</a>
+          <a ng-click="mode='after'" class="button end dark large" href="#button-bar" role="button">After</a>
+      </span>
+
+      <css-model style="normal" title="Normal" shown="mode=='normal'"></css-model>    
+      <css-model style="hover" title="Pseudo: Hover"  shown="mode=='hover'"></css-model> 
+      <css-model style="before" title="Pseudo: Before"  shown="mode=='before'"></css-model>    
+      <css-model style="after" title="Pseudo: After"  shown="mode=='after'"></css-model> 
+    </div>
+    <div class="sourcecode">
+      <highlight type="css" source="sources.normal" ></highlight>
+      <highlight type="css" source="sources.hover" ></highlight>
+      <highlight type="css" source="sources.before" ></highlight>
+      <highlight type="css" source="sources.after" ></highlight>
+    </div>
+    <!--ng-style="compiledStyle" style-data="source" markdown="output"-->
+    <div class="result">
+
+      <style-frame >
+        <div class="element">
+          <markdown ng-model="output"></markdown>
+        </div>
+      </style-frame>
+    </div>
+
+    <script>
+      head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js",              
+              "http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js",
+              "lib/highlight.min.js",
+              "lib/jquery-ui-1.10.0.custom.min.js",
+              "lib/miniColor/jquery.miniColors.js",
+              "lib/showdown.js",
+              "js/app.js",
+              "js/model.js",
+              "js/directives/highlight.js",
+              "js/directives/markdown.js",
+              "js/directives/switch.js",
+              "js/directives/input/yag-select.js",
+              "js/directives/input/yag-unit.js",
+              "js/directives/input/yag-trbl.js",
+              "js/directives/input/yag-radius.js",
+              "js/directives/input/yag-rgba.js",
+              "js/directives/input/yag-number.js",
+              "js/directives/input/yag-bool.js",
+              "js/directives/input/yag-gradient.js",
+              "js/components/style-frame.js",
+              "js/components/css-element.js",
+              "js/components/gradient.js",
+              "js/components/general.js",
+              "js/components/text.js",
+              "js/components/positioning.js",
+              "js/components/box-model.js",
+              "js/components/box-shadow.js",
+              "js/components/border.js",
+              "js/components/css-model.js",
+              "js/controllers/app.js");
+      head.ready(function(){
+       // $('.settings').draggable({handle:'.mover'});
+      });
+
+      
+    </script>
+
+
+    </body>
+</html>

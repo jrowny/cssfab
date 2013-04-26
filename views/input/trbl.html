@@ -1,0 +1,18 @@
+<div class="control-group clearfix">
+  <label class="control-label" for="{{iid}}">{{title}}</label>
+  <div class="controls">
+    <div class="input-prepend">
+      <switch ng-model="enabled" iid="{{iid}}"></switch>
+      <span ng-click="show()" class="trbl text-field dark" ng-class="{true:'', false: 'disabled'}[enabled]">{{getValue()}}</span>
+      <select name="{{iid}}-unit" id="{{iid}}-unit" class="input-mini dark button "
+              ng-disabled="!enabled"
+              ng-class="{true:'', false: 'disabled'}[enabled]"
+              ng-model="unitValue" 
+              ng-options="i as i for i in units"></select>
+    </div>
+    <div ng-show="vis &amp;&amp; enabled" class="trbl-input"><input type="number" ng-model="value.top" class="input-mini top text-field dark"/>
+      <input type="number" ng-model="value.right" class="input-mini right text-field dark"/>
+      <input type="number" ng-model="value.left" class="input-mini left text-field dark"/>
+      <input type="number" ng-model="value.bottom" class="input-mini bottom text-field dark"/></div>
+  </div>
+</div>

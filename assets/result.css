@@ -1,0 +1,8 @@
+body{
+  padding:0;margin:0;
+  background: url('tiny_grid.png');
+}
+
+.markdown_editor, .markdown_container, .markdown_view{width:100%; height:100%; margin:0; padding:0;}
+.markdown_editor{resize: none;padding:6px; box-sizing: border-box; background:rgba(255,255,255,0.5);}
+.markdown_view p{margin:0; padding: 0;}

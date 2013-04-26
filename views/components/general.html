@@ -1,0 +1,23 @@
+<div class="form-horizontal">
+  <yag-select title="Display" 
+              iid="display"
+              enabled="element.display.enabled"    
+              value="element.display.value"
+              lookup="lookups.display"></yag-select>
+  <yag-select title="Overflow" 
+              iid="overflow"
+              enabled="element.overflow.enabled"    
+              value="element.overflow.value"
+              lookup="lookups.overflow"></yag-select>
+  <yag-number title="Opacity" 
+              iid="opacity"
+              step="0.01"
+              max="1"
+              min="0"  
+              enabled="element.opacity.enabled"    
+              value="element.opacity.value"></yag-number>
+  <yag-rgba title="Background" 
+              iid="bgColor"
+              enabled="element['background-color'].enabled"    
+              value="element['background-color'].value"></yag-rgba>
+</div>

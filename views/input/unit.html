@@ -1,0 +1,13 @@
+<div class="control-group clearfix">
+  <label class="control-label" for="{{iid}}">{{title}}</label>
+  <div class="controls">
+    <div class="input-prepend">
+      <switch ng-model="enabled" iid="{{iid}}"></switch>
+      <input type="number" name="{{iid}}" id="{{iid}}" ng-disabled="!enabled" ng-model="value" class="input-mini text-field dark"/>
+      <select name="{{iid}}-unit" id="{{iid}}-unit" class="input-mini dark button"
+              ng-disabled="!enabled"
+              ng-model="unitValue" 
+              ng-options="i as i for i in units"></select>
+    </div>
+  </div>
+</div>

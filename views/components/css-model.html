@@ -1,0 +1,39 @@
+<div ng-show="shown" >
+  <span class="button-group dark">
+      <a class="button drop-down dark" ng-click="dropshown=!dropshown"  tabindex="0" role="button" aria-haspopup="true" aria-expanded="true">
+        <i class="icon-plus"></i>&nbsp;&nbsp;&nbsp;Add<i class="drop-down-triangle"></i>
+      </a>
+      <ul class="menu" role="menu" ng-show="dropshown">
+        <li ng-show="limit('general')"  role="presentation">
+          <a ng-click="addElement('general')" href="#" tabindex="0" role="menuitem">General</a>
+        </li>
+        <li ng-show="limit('text')"  role="presentation">
+          <a ng-click="addElement('text')" href="#" tabindex="-1" role="menuitem">Text</a>
+        </li>
+        <li ng-show="limit('positioning')"  role="presentation">
+          <a ng-click="addElement('positioning')" href="#" tabindex="-2" role="menuitem">Positioning</a>
+        </li>
+        <li ng-show="limit('border')"  role="presentation">
+          <a ng-click="addElement('border')" href="#" tabindex="-3" role="menuitem">Border</a>
+        </li>
+        <li ng-show="limit('boxModel')"  role="presentation">
+          <a ng-click="addElement('boxModel')" href="#" tabindex="-4" role="menuitem">Box Model</a>
+        </li>
+        <li ng-show="limit('gradient')"  role="presentation">
+          <a ng-click="addElement('gradient')" href="#" tabindex="-5" role="menuitem">Gradient</a>
+        </li>
+        <li  role="presentation">
+          <a ng-click="addElement('boxShadow')" href="#" tabindex="-6" role="menuitem">Box Shadow</a>
+        </li>
+      </ul>
+  </span>
+  <span class="large">{{title}}</span>
+  <div style="clear:both;" ng-repeat="element in style.elements" class="el-area"  ng-class="{true:'active'}[section==element.name]"> 
+      <div class="el-head">
+        <a class="title" href="#" ng-click="setSection(element.name)" >{{element.name}}</a>
+        <a class="remove" ng-click="removeElement($index)" ><i class="icon-trash"></i></a>
+      </div>
+      <css-element ng-model="element" ng-show="section==element.name"></css-element>  
+  </div>
+
+</div>

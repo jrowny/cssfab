@@ -1,0 +1,112 @@
+html, body{height:100%;}
+body{
+  margin:0;padding:0;
+}
+
+pre code{background: transparent;}
+pre{
+  vertical-align: top;
+  max-width: 400px;
+  display: inline-block;
+}
+.settings{
+  width:360px; 
+  height:100%; 
+  box-sizing: border-box;
+}
+
+/*topcoat overrides*/
+select.button.dark option{color:#454545;}
+select.button.dark {min-width:40px;padding-right:20px;}
+.text-field{height:23px;}
+/*
+.el-head{
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.13);
+  background: #3b3f41;
+  height:40px;
+}
+.el-head a{
+  line-height: 40px;
+  font-size:16px;
+  text-decoration: none;
+  color:#fff;
+  font-weight: normal;
+  text-shadow: 0 1px 1px #000;
+  display: block;
+}
+.el-head .title{
+  padding-left:16px;
+  width: 80%;
+  float:left;
+}
+.el-head .remove{
+  padding-right:16px;
+  float:right;
+}*/
+.form-horizontal{padding:15px 0;}
+.control-group {width:100%;}
+.control-group label{float:left; width:100px; text-align:right;}
+.control-group .controls{float:right; width:240px; }
+.result{
+  position: fixed; 
+  bottom: 301px;
+  left:361px; 
+  top: 0; 
+  right: 0;
+}
+.input-mini{width:50px;min-width:40px;}
+
+.radius, .trbl{
+  min-width:30px;
+  display:inline-block;
+  padding:3px 4px;
+  height:23px;
+}
+
+.result iframe{width:100%; height:100%;border:0;}
+.sourcecode{position: fixed; bottom:0; overflow:auto;height:300px; right:0; left: 361px; border-top:1px solid #ccc;}
+
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+  display: block;
+}
+ 
+* html .clearfix {
+  height: 1%;
+}
+
+.trbl-input, .radius-input{
+  position:relative; 
+  height:105px;
+  background:#6b7377;
+  margin:10px 10px 5px 0;
+  border-radius:4px;  
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.trbl-input .top{position:absolute; left:80px; top:10px;}
+.trbl-input .bottom{position:absolute; left:80px; top:70px;}
+.trbl-input .left{position:absolute; left:10px; top:40px;}
+.trbl-input .right{position:absolute; right:10px; top:40px;}
+.radius-input .tl{position:absolute; left:10px; top:10px;}
+.radius-input .tr{position:absolute; right:10px; top:10px;}
+.radius-input .br{position:absolute; bottom:10px; right:10px;}
+.radius-input .bl{position:absolute; bottom:10px; left:10px;}
+
+.ui-slider-horizontal{border:1px solid #ccc; }
+.ui-slider-horizontal .ui-slider-handle{border:1px solid #ccc; top:14px;}
+
+

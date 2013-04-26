@@ -1,0 +1,9 @@
+<div class="control-group clearfix">
+  <label class="control-label" for="{{iid}}">{{title}}</label>
+  <div class="controls">
+    <div class="input-prepend">
+      <switch ng-model="enabled" iid="{{iid}}"></switch>
+      <input ng-disabled="!enabled" type="minicolors" id="{{iid}}" data-opacity="{{value.a}}" value="{{value.getHex()}}" />
+    </div>
+  </div>
+</div>
